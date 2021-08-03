@@ -14,10 +14,17 @@
 </head>
 <body>
     <header>
-        <h1>Geometric Figures Calculator</h1> 
+        <h1>Math bot</h1> 
+        <nav>
+            <ul>
+                <li><a href="#geometry-calculator">Geometry Calculator</a></li>
+                <li><a href="#discounts">Discounts</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="geometry-calculator">
+    <main>
+    <section id="geometry-calculator">
         <div class="card square-card">
             <div class="card__header">
                 <i class="far fa-square"></i>
@@ -105,8 +112,24 @@
             <p class="card__result" id="circle-result"></p>
         </div>
     </section>
-
-
-   <script src="./main.js"></script>
+    <section id="discounts">
+        <div class="discount__form">
+            <form>
+                <div class="discount__input">
+                    <label for="discount-original-price">STARTING PRICE</label>
+                    <div>
+                        <input type="number" id="discount-original-price"> <span>$</span>
+                    </div>
+                </div>
+                <div class="discount__input">
+                    <label for="discount-discount">DISCOUNT</label>
+                    <input type="number" id="discount-discount"> <span>%</span>
+                </div>
+            </form>
+        </div>
+    </section>
+    </main>
+   <script src="./geometry.js"></script>
+   <script src="./discounts.js"></script>
 </body>
 </html>
