@@ -4,10 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figuras Geometricas</title>
+    <script src="https://kit.fontawesome.com/254ff373eb.js" crossorigin="anonymous"></script>
+    <title>Geometric Figures Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-   <h1>Figuras Geometricas</h1> 
+    <header>
+        <h1>Geometric Figures Calculator</h1> 
+    </header>
+
+    <section class="geometry-calculator">
+        <div class="card square-card">
+            <div class="card__header">
+                <i class="far fa-square"></i>
+                <h3>Square</h3>
+            </div>
+            <div class="card__form">
+                <form> 
+                    <label for="square-side">How long is each side of your square?</label>
+                    <div class="card__form-input">
+                        <input type="number" name="square-side" id="square-side" class="form-input">
+                        <select name="square-unit" id="square-unit" class="form-input">
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                            <option value="km">km</option>
+                        </select>
+                    </div>
+                    <div class="card__form-buttons">
+                        <button type="button" onclick="calculateSquareArea()">Calculate area</button>
+                        <button type="button" onclick="calculateSquarePerimeter()">Calculate perimeter</button>
+                    </div>
+                </form>
+            </div>
+            <p class="card__result" id="square-result"></p>
+        </div>
+
+        <div class="card triangle-card">
+            <div class="card__header">
+                <img src="./assets/bleach.svg" alt="Triangle">
+                <h3>Triangle</h3>
+            </div>
+            <div class="card__form">
+                <form>
+                    <div class="triangle-card__form-input">
+                        <p>What are the measurements of your triangle?</p>
+                        <label for="triangleSideA">Side A</label>
+                        <input type="number" class="form-input" id="triangleSideA">
+
+                        <label for="triangleSideB" >Side B</label>
+                        <input type="number" class="form-input" id="triangleSideB">
+
+                        <label for="triangleBase" >Base</label>
+                        <input type="number" class="form-input" id="triangleBase">
+
+                        <label for="triangleHeight">Height</label>
+                        <input type="number" class="form-input" id="triangleHeight">
+
+                        <select name="triangle-unit" id="triangle-unit" class="form-input">
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                            <option value="km">km</option>
+                        </select>
+
+                    </div>
+                    <div class="card__form-buttons">
+                        <button type="button" onclick="calculateTriangleArea()">Calculate area</button>
+                        <button type="button" onclick="calculateTrianglePerimeter()">Calculate perimeter</button>
+                    </div>
+                </form>
+                <p class="card__result" id="square-result"></p>
+            </div>
+        </div>
+
+        <div class="card circle-card">
+            <div class="card__header">
+                <i class="far fa-circle"></i>
+                <h3>Circle</h3>
+            </div>
+            <div class="card__form">
+                <form> 
+                    <label for="circle-radio">What is the radio of your circle?</label>
+                    <div class="card__form-input">
+                        <input type="number" name="circle-radio" id="circle-radio" class="form-input">
+                        <select name="circle-unit" id="circle-unit" class="form-input">
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                            <option value="km">km</option>
+                        </select>
+                    </div>
+                    <div class="card__form-buttons">
+                        <button type="button" onclick="calculateCircleArea()">Calculate area</button>
+                        <button type="button" onclick="calculateCirclePerimeter()">Calculate perimeter</button>
+                    </div>
+                </form>
+            </div>
+            <p class="card__result" id="circle-result"></p>
+        </div>
+    </section>
+
+
    <script src="./figuras.js"></script>
 </body>
 </html>

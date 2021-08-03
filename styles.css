@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+}
+
+:root {
+    --green-color: #00f2b5;
+    --purple-color: rgb(189, 175, 218);
+    --orange-color: #ffc771;
+}
+
+.geometry-calculator {
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.7rem;
+    min-width: 290px;
+}
+
+.card .card__form button {
+    cursor: pointer;
+    background-color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card__header i{
+    font-size: 55px;
+    margin-right: 10px;
+}
+
+.card__header img {
+    width: 55px;
+    margin-right: 10px;
+}
+.card__form-input {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.form-input{
+    background-color: rgba(255,255,255, 20%);
+    color: white;
+    border: 0;
+    padding: 1rem;
+    margin: 1rem 0;
+    height: 4rem;
+    font-size: 1.6rem;
+}
+
+.form-input:focus {
+    outline: 2px solid white;
+    outline-style: auto;
+}
+
+.card__form-input select {
+    background: transparent;
+    width: 6rem;
+}
+
+.card__form-input select * {
+    color: black;
+}
+
+.card__result {
+    border-block-end: 2px solid white;
+	border-radius: 16px;
+}
+
+.square-card {
+    background-color: var(--green-color);
+}
+
+.square-card .card__form button {
+    color: var(--green-color);
+}
+
+.triangle-card {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    background-color: var(--purple-color);
+}
+
+.triangle-card .card__form button {
+    color: var(--purple-color);
+}
+
+.triangle-card__form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.triangle-card__form-input select * {
+    color: black;
+}
+
+.circle-card {
+    background-color: var(--orange-color);
+}
+
+.circle-card .card__form button {
+    color: var(--orange-color);
+}
+
+@media (max-width: 1024px){
+    .geometry-calculator {
+        justify-items: center;
+    }
+    .card {
+        max-width: 300px;
+    }
+
+    .card .card__form button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .geometry-calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .card .card__form button {
+        font-size: 1.3rem;
+    }
+}
