@@ -13,7 +13,7 @@ function areaSquare(side){
 
 
 function perimeterTriangle(firstSide, secondSide, base){
-    return parseInt(firstSide) + parseInt(secondSide) + parseInt(base);
+    return Number(firstSide) + Number(secondSide) + Number(base);
 }
 
 
@@ -44,14 +44,20 @@ function calculateSquareArea(){
     const side_input = document.getElementById("square-side");
     const side_value = side_input.value;
     const square_area = areaSquare(side_value);
-    alert(square_area);
+    const unit_input = document.getElementById("square-unit");
+    const unit_value = unit_input.value;
+    const result_paragraph = document.getElementById("square-result");
+    result_paragraph.innerText = "Area: " + square_area + unit_value + "^2";
 }
 
 function calculateSquarePerimeter(){
     const side_input = document.getElementById("square-side");
     const side_value = side_input.value;
     const square_perimeter = perimeterSquare(side_value);
-    alert(square_perimeter);
+    const unit_input = document.getElementById("square-unit");
+    const unit_value = unit_input.value;
+    const result_paragraph = document.getElementById("square-result");
+    result_paragraph.innerText = "Perimeter: " + square_perimeter + unit_value;
 }
 
 //triangle
@@ -61,7 +67,10 @@ function calculateTriangleArea(){
     const height_input = document.getElementById("triangleHeight");
     const height_value = height_input.value;
     const triangle_area = areaTriangle(base_value, height_value); 
-    alert(triangle_area);
+    const unit_input = document.getElementById("triangle-unit");
+    const unit_value = unit_input.value;
+    const result_paragraph = document.getElementById("triangle-result");
+    result_paragraph.innerText = "Area: " + triangle_area+ unit_value + "^2";
 }
 
 function calculateTrianglePerimeter(){
@@ -72,7 +81,10 @@ function calculateTrianglePerimeter(){
     const base_input = document.getElementById("triangleBase");
     const base_value = base_input.value;
     const triangle_perimeter = perimeterTriangle(sideA_value, sideB_value, base_value); 
-    alert(triangle_perimeter);
+    const unit_input = document.getElementById("triangle-unit");
+    const unit_value = unit_input.value;
+    const result_paragraph = document.getElementById("triangle-result");
+    result_paragraph.innerText = "Perimeter: " + triangle_perimeter+ unit_value;
 }
 
 //circle
@@ -81,13 +93,19 @@ function calculateCircleArea(){
     const radio_input = document.getElementById("circle-radio");
     const radio_value = radio_input.value;
     const circle_area = areaCircle(radio_value);
-    alert(circle_area);
+    const unit_input = document.getElementById("circle-unit");
+    const unit_value = unit_input.value;
+    const result_paragraph = document.getElementById("circle-result");
+    result_paragraph.innerText = "Area: " + circle_area+ unit_value + "^2";
 }
 
 function calculateCirclePerimeter(){
     const radio_input = document.getElementById("circle-radio");
     const radio_value = radio_input.value;
     const circle_perimeter = circumference(radio_value); 
-    alert(circle_perimeter);
+    const unit_input = document.getElementById("circle-unit");
+    const unit_value = unit_input.value;
+    const result_paragraph = document.getElementById("circle-result");
+    result_paragraph.innerText = "Perimeter: " + circle_perimeter + unit_value;
 }
 

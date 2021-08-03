@@ -94,6 +94,10 @@ body {
 .card__result {
     border-block-end: 2px solid white;
 	border-radius: 16px;
+    margin-top: 10px;
+    height: 40px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .square-card {

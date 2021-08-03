@@ -24,6 +24,7 @@
     </header>
 
     <main>
+    <!--GEOMETRY SECTION-->
     <section id="geometry-calculator">
         <div class="card square-card">
             <div class="card__header">
@@ -83,7 +84,7 @@
                         <button type="button" onclick="calculateTrianglePerimeter()">Calculate perimeter</button>
                     </div>
                 </form>
-                <p class="card__result" id="square-result"></p>
+                <p class="card__result" id="triangle-result"></p>
             </div>
         </div>
 
@@ -112,6 +113,7 @@
             <p class="card__result" id="circle-result"></p>
         </div>
     </section>
+    <!--DISCOUNTS SECTION-->
     <section id="discounts">
         <div class="discount__form">
             <form>
@@ -123,7 +125,16 @@
                 </div>
                 <div class="discount__input">
                     <label for="discount-discount">DISCOUNT</label>
-                    <input type="number" id="discount-discount"> <span>%</span>
+                    <div>
+                        <input type="number" id="discount-discount"> <span>%</span>
+                    </div>
+                </div>
+                <button type="button" onclick="calculateDiscount()">calculate</button>
+                <div class="discount__input discount__input--final-price">
+                    <p>FINAL PRICE</p>
+                    <div class="discount__result">
+                        <span id="priceResult">0</span><span>$</span>
+                    </div>
                 </div>
             </form>
         </div>
