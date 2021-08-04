@@ -11,5 +11,6 @@ function calculateDiscount(){
     const discount_input = document.getElementById("discount-discount");
     const discount_value = discount_input.value;
     const final_price = finalPrice(price_value, discount_value);
-    alert(final_price);
+    const priceResult_span = document.getElementById("priceResult");
+    priceResult_span.innerText = final_price;
 }
