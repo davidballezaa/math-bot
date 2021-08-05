@@ -163,3 +163,75 @@ body {
         font-size: 1.3rem;
     }
 }
+
+/* DISCOUNTS */
+
+#discounts {
+    background-color: var(--green-color);
+    display: flex;
+    justify-content: center;
+}
+
+.discount__form {
+    height: 90vh;
+    width: 300px;
+    box-shadow: 0 0 32px 2px rgb(0 0 0 / 50%);
+}
+
+.discount__form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.discount__input {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: var(--green-color);
+}
+
+
+.discount__input:first-of-type {
+    box-shadow: 0 2px 1.2rem 0 rgb(0 0 0 / 50%);
+    z-index: 1;
+}
+
+.discount__input--final-price {
+    background-color: var(--green-color);
+    color: whitesmoke;
+}
+
+.discount__input label { 
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.discount__input div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.discount__input > div input {
+    border: none;
+    background-color: rgba(0,0,0, 4%);
+    text-align: center;
+    font-size: 5rem;
+    width: 50%;
+    height: 50px;
+}
+
+.discount__input > div input:focus {
+    outline: none;
+}
+
+.discount__input > div span{
+    font-size: 5rem;
+    margin-left: 5px;
+}
