@@ -155,10 +155,12 @@
                         <p>(Separated by hyphens)</p>
                     </div>
                     <div class="statistics-card__form">
-                        <input type="text">
-                        <button type="button" onclick="calcularPromedio()" class="statisticsButton">Promedio</button>
-                        <button type="button" onclick="calcularModa()" class="statisticsButton">Moda</button>
-                        <button type="button" onclick="calcularMediana()" class="statisticsButton">Mediana</button>
+                        <input type="text" placeholder="Example: 6-11-2003" id="statistics-input">
+                        <div class="statistics-card__form-buttons">
+                            <button type="button" onclick="calcularPromedio()" class="statisticsButton">Promedio</button>
+                            <button type="button" onclick="calcularModa()" class="statisticsButton">Moda</button>
+                            <button type="button" onclick="calcularMediana()" class="statisticsButton">Mediana</button>
+                        </div>
                         <p id="statisticsResult"></p>
                     </div>
                 </div>
