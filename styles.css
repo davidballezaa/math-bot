@@ -250,7 +250,7 @@ body {
 
 .statistics-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -258,8 +258,13 @@ body {
     margin: 40px;
 }
 
+.statistics-description span {
+    font-weight: 600;
+}
+
 .statistics-card {
-    max-width: 300px;
+    width: 300px;
+    min-width: 300px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -292,3 +297,13 @@ body {
     text-align: center;
 } 
 
+
+@media (max-width: 920px) {
+    .statistics-main {
+        flex-direction: column;
+    }
+
+    .statistics-card {
+        margin: 0;
+    }
+}
