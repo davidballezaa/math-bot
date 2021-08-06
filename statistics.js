@@ -1,7 +1,6 @@
 //initial functions
 function promedio(list){
-    var sumaLista = 0;
-    list.forEach(value => sumaLista+=value);
+    var sumaLista = list.reduce((acumulado=0, item)=> acumulado+=item);
     return (sumaLista / list.length).toFixed(5); 
 }
 
