@@ -26,6 +26,7 @@ body {
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: 20px;
 }
 .card {
     display: flex;
@@ -171,6 +172,7 @@ body {
     background-color: var(--green-color);
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .discount__form {
@@ -242,11 +244,9 @@ body {
 .statistics-wrapper {
     background-color: var(--blue-color);
     color: whitesmoke;
-}
-
-.statistics-wrapper h2 {
     padding: 20px;
 }
+
 
 .statistics-main {
     display: flex;
@@ -263,8 +263,9 @@ body {
 }
 
 .statistics-card {
-    width: 300px;
-    min-width: 300px;
+    max-width: 300px;
+    min-width: 250px;
+    width: 80%;
     padding: 10px;
     display: flex;
     flex-direction: column;
