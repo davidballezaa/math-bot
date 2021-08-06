@@ -138,8 +138,40 @@
             </form>
         </div>
     </section>
+
+    <!-- STATISTCS SECTION -->
+    <section>
+        <div class="statistics-wrapper">
+            <h2>Statistics</h2> 
+            <div class="statistics-main">
+                <div class="statistics-description">
+                    <p>Use the <span>promedio </span>when your data doesn't vary too much.</p>
+                    <p>Use the <span>mediana </span>when your data varies too much.</p>
+                    <p>Use the <span>moda </span> you want to know the popular element.</p>
+                </div>
+                <div class="statistics-card">
+                    <div class="statistics-card__header">
+                        <h3>Please insert your data:</h3>
+                        <p>(Separated by hyphens)</p>
+                    </div>
+                    <div class="statistics-card__form">
+                        <input type="text">
+                        <button type="button" onclick="calcularPromedio()" class="statisticsButton">Promedio</button>
+                        <button type="button" onclick="calcularModa()" class="statisticsButton">Moda</button>
+                        <button type="button" onclick="calcularMediana()" class="statisticsButton">Mediana</button>
+                        <p id="statisticsResult"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     </main>
+
+
+
    <script src="./geometry.js"></script>
    <script src="./discounts.js"></script>
+   <script src="./statistics.js"></script>
 </body>
 </html>
