@@ -31,11 +31,9 @@ function moda(list){
     list.forEach(value => (inputCount[value]) ?  inputCount[value]+=1 : inputCount[value]=1);
     var inputCountValues = Object.values(inputCount);
     var inputCountArray = Object.entries(inputCount);
-    var max = Math.max(...inputCountValues);
+    var maxCount = Math.max(...inputCountValues);
     inputCountArray.forEach(function(value){
-      if(value[1]==max){
-          res.push(value[0]);
-      }
+      if(value[1]==maxCount){ res.push(value[0]); }
     });
     return res;
 }

@@ -190,6 +190,7 @@ body {
 }
 
 .discount__input {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -238,6 +239,14 @@ body {
     font-size: 5rem;
     margin-left: 5px;
 }
+
+#priceResult{
+    font-size: 5rem;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
 
 /* STATISTICS SECTION */
 
@@ -292,10 +301,12 @@ body {
 }
 
 #statisticsResult {
-    line-height: 3;
+    line-height: 2;
     height: 60px;
     font-size: 2.4rem;
     text-align: center;
+    overflow-y: hidden;
+    overflow-x: auto;
 } 
 
 
