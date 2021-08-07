@@ -288,7 +288,16 @@ body {
 }
 
 .statistics-card__form input{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
     width: 100%;
+    font-size: 20px;
+}
+
+.statistics-card__form input::placeholder{
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .statistics-card__form-buttons {
@@ -298,6 +307,11 @@ body {
 
 .statistics-card__form-buttons > * { 
     margin-top: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-weight: 600;
 }
 
 #statisticsResult {
