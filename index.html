@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,180 +8,184 @@
     <script src="https://kit.fontawesome.com/254ff373eb.js" crossorigin="anonymous"></script>
     <title>Geometric Figures Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body>
     <header>
-        <h1>Math bot</h1> 
         <nav>
             <ul>
-                <li><a href="#geometry-calculator">Geometry Calculator</a></li>
+                <li><a href="#geometry-calculator">Geometry</a></li>
                 <li><a href="#discounts">Discounts</a></li>
                 <li><a href="#statistics-section">Statistics</a></li>
             </ul>
         </nav>
+        <h1>Math bot</h1>
     </header>
 
     <main>
-    <!--GEOMETRY SECTION-->
-    <section id="geometry-calculator">
-        <div class="card square-card">
-            <div class="card__header">
-                <i class="far fa-square"></i>
-                <h3>Square</h3>
-            </div>
-            <div class="card__form">
-                <form> 
-                    <label for="square-side">How long is each side of your square?</label>
-                    <div class="card__form-input">
-                        <input type="number" name="square-side" id="square-side" class="form-input">
-                        <select name="square-unit" id="square-unit" class="form-input">
-                            <option value="cm">cm</option>
-                            <option value="mm">mm</option>
-                            <option value="km">km</option>
-                        </select>
-                    </div>
-                    <div class="card__form-buttons">
-                        <button type="button" onclick="calculateSquareArea()">Calculate area</button>
-                        <button type="button" onclick="calculateSquarePerimeter()">Calculate perimeter</button>
-                    </div>
-                </form>
-            </div>
-            <p class="card__result" id="square-result"></p>
-        </div>
-
-        <div class="card triangle-card">
-            <div class="card__header">
-                <img src="./assets/bleach.svg" alt="Triangle">
-                <h3>Triangle</h3>
-            </div>
-            <div class="card__form">
-                <form>
-                    <div class="triangle-card__form-input">
-                        <p>What are the measurements of your triangle?</p>
-                        <label for="triangleSideA">Side A</label>
-                        <input type="number" class="form-input" id="triangleSideA">
-
-                        <label for="triangleSideB" >Side B</label>
-                        <input type="number" class="form-input" id="triangleSideB">
-
-                        <label for="triangleBase" >Base</label>
-                        <input type="number" class="form-input" id="triangleBase">
-
-                        <label for="triangleHeight">Height</label>
-                        <input type="number" class="form-input" id="triangleHeight">
-
-                        <select name="triangle-unit" id="triangle-unit" class="form-input">
-                            <option value="cm">cm</option>
-                            <option value="mm">mm</option>
-                            <option value="km">km</option>
-                        </select>
-
-                    </div>
-                    <div class="card__form-buttons">
-                        <button type="button" onclick="calculateTriangleArea()">Calculate area</button>
-                        <button type="button" onclick="calculateTrianglePerimeter()">Calculate perimeter</button>
-                    </div>
-                </form>
-                <p class="card__result" id="triangle-result"></p>
-            </div>
-        </div>
-
-        <div class="card circle-card">
-            <div class="card__header">
-                <i class="far fa-circle"></i>
-                <h3>Circle</h3>
-            </div>
-            <div class="card__form">
-                <form> 
-                    <label for="circle-radio">What is the radio of your circle?</label>
-                    <div class="card__form-input">
-                        <input type="number" name="circle-radio" id="circle-radio" class="form-input">
-                        <select name="circle-unit" id="circle-unit" class="form-input">
-                            <option value="cm">cm</option>
-                            <option value="mm">mm</option>
-                            <option value="km">km</option>
-                        </select>
-                    </div>
-                    <div class="card__form-buttons">
-                        <button type="button" onclick="calculateCircleArea()">Calculate area</button>
-                        <button type="button" onclick="calculateCirclePerimeter()">Calculate perimeter</button>
-                    </div>
-                </form>
-            </div>
-            <p class="card__result" id="circle-result"></p>
-        </div>
-    </section>
-    <!--DISCOUNTS SECTION-->
-    <section id="discounts">
-        <div class="discount__form">
-            <form>
-                <div class="discount__input">
-                    <label for="discount-original-price">STARTING PRICE</label>
-                    <div>
-                        <input type="number" id="discount-original-price"> <span>$</span>
-                    </div>
+        <!--GEOMETRY SECTION-->
+        <section id="geometry-calculator">
+            <div class="card square-card">
+                <div class="card__header">
+                    <i class="far fa-square"></i>
+                    <h3>Square</h3>
                 </div>
-                <div class="discount__input">
-                    <label for="discount-discount">DISCOUNT</label>
-                    <div>
-                        <input type="number" id="discount-discount"> <span>%</span>
-                    </div>
-                </div>
-                <div class="discount__input discount__input--final-price">
-                    <p>FINAL PRICE</p>
-                    <div class="discount__result">
-                        <p id="priceResult">0</p><span>$</span>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- STATISTCS SECTION -->
-    <section id="statistics-section">
-        <div class="statistics-wrapper">
-            <h2>Statistics</h2> 
-            <div class="statistics-main">
-                <div class="statistics-description">
-                    <p>Use the <span>promedio </span>when your data doesn't vary too much.</p>
-                    <p>Use the <span>moda </span> you want to know the popular element.</p>
-                    <p>Use the <span>mediana </span>when your data varies too much.</p>
-                </div>
-                <div class="statistics-card">
-                    <div class="statistics-card__header">
-                        <h3>Please insert your numbers:</h3>
-                        <p>(Separated by spaces)</p>
-                    </div>
-                    <div class="statistics-card__form">
-                        <input type="text" placeholder="Example: 6 11 2003" id="statistics-input">
-                        <div class="statistics-card__form-buttons">
-                            <button type="button" onclick="calcularPromedio()" class="statisticsButton">Promedio</button>
-                            <button type="button" onclick="calcularModa()" class="statisticsButton">Moda</button>
-                            <button type="button" onclick="calcularMediana()" class="statisticsButton">Mediana</button>
+                <div class="card__form">
+                    <form>
+                        <label for="square-side">How long is each side of your square?</label>
+                        <div class="card__form-input">
+                            <input type="number" name="square-side" id="square-side" class="form-input">
+                            <select name="square-unit" id="square-unit" class="form-input">
+                                <option value="cm">cm</option>
+                                <option value="mm">mm</option>
+                                <option value="km">km</option>
+                            </select>
                         </div>
-                        <p id="statisticsResult"></p>
+                        <div class="card__form-buttons">
+                            <button type="button" onclick="calculateSquareArea()">Calculate area</button>
+                            <button type="button" onclick="calculateSquarePerimeter()">Calculate perimeter</button>
+                        </div>
+                    </form>
+                </div>
+                <p class="card__result" id="square-result"></p>
+            </div>
+
+            <div class="card triangle-card">
+                <div class="card__header">
+                    <img src="./assets/bleach.svg" alt="Triangle">
+                    <h3>Triangle</h3>
+                </div>
+                <div class="card__form">
+                    <form>
+                        <div class="triangle-card__form-input">
+                            <p>What are the measurements of your triangle?</p>
+                            <label for="triangleSideA">Side A</label>
+                            <input type="number" class="form-input" id="triangleSideA">
+
+                            <label for="triangleSideB">Side B</label>
+                            <input type="number" class="form-input" id="triangleSideB">
+
+                            <label for="triangleBase">Base</label>
+                            <input type="number" class="form-input" id="triangleBase">
+
+                            <label for="triangleHeight">Height</label>
+                            <input type="number" class="form-input" id="triangleHeight">
+
+                            <select name="triangle-unit" id="triangle-unit" class="form-input">
+                                <option value="cm">cm</option>
+                                <option value="mm">mm</option>
+                                <option value="km">km</option>
+                            </select>
+
+                        </div>
+                        <div class="card__form-buttons">
+                            <button type="button" onclick="calculateTriangleArea()">Calculate area</button>
+                            <button type="button" onclick="calculateTrianglePerimeter()">Calculate perimeter</button>
+                        </div>
+                    </form>
+                    <p class="card__result" id="triangle-result"></p>
+                </div>
+            </div>
+
+            <div class="card circle-card">
+                <div class="card__header">
+                    <i class="far fa-circle"></i>
+                    <h3>Circle</h3>
+                </div>
+                <div class="card__form">
+                    <form>
+                        <label for="circle-radio">What is the radio of your circle?</label>
+                        <div class="card__form-input">
+                            <input type="number" name="circle-radio" id="circle-radio" class="form-input">
+                            <select name="circle-unit" id="circle-unit" class="form-input">
+                                <option value="cm">cm</option>
+                                <option value="mm">mm</option>
+                                <option value="km">km</option>
+                            </select>
+                        </div>
+                        <div class="card__form-buttons">
+                            <button type="button" onclick="calculateCircleArea()">Calculate area</button>
+                            <button type="button" onclick="calculateCirclePerimeter()">Calculate perimeter</button>
+                        </div>
+                    </form>
+                </div>
+                <p class="card__result" id="circle-result"></p>
+            </div>
+        </section>
+        <!--DISCOUNTS SECTION-->
+        <section id="discounts">
+            <div class="discount__form">
+                <form>
+                    <div class="discount__input">
+                        <label for="discount-original-price">STARTING PRICE</label>
+                        <div>
+                            <input type="number" id="discount-original-price"> <span>$</span>
+                        </div>
+                    </div>
+                    <div class="discount__input">
+                        <label for="discount-discount">DISCOUNT</label>
+                        <div>
+                            <input type="number" id="discount-discount"> <span>%</span>
+                        </div>
+                    </div>
+                    <div class="discount__input discount__input--final-price">
+                        <p>FINAL PRICE</p>
+                        <div class="discount__result">
+                            <p id="priceResult">0</p><span>$</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- STATISTCS SECTION -->
+        <section id="statistics-section">
+            <div class="statistics-wrapper">
+                <h2>Statistics</h2>
+                <div class="statistics-main">
+                    <div class="statistics-description">
+                        <p>Use the <span>promedio </span>when your data doesn't vary too much.</p>
+                        <p>Use the <span>moda </span> you want to know the popular element.</p>
+                        <p>Use the <span>mediana </span>when your data varies too much.</p>
+                    </div>
+                    <div class="statistics-card">
+                        <div class="statistics-card__header">
+                            <h3>Please insert your numbers:</h3>
+                            <p>(Separated by spaces)</p>
+                        </div>
+                        <div class="statistics-card__form">
+                            <input type="text" placeholder="Example: 6 11 2003" id="statistics-input">
+                            <div class="statistics-card__form-buttons">
+                                <button type="button" onclick="calcularPromedio()"
+                                    class="statisticsButton">Promedio</button>
+                                <button type="button" onclick="calcularModa()" class="statisticsButton">Moda</button>
+                                <button type="button" onclick="calcularMediana()"
+                                    class="statisticsButton">Mediana</button>
+                            </div>
+                            <p id="statisticsResult"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section>
+        </section>
+        <!-- <section>
         <button type="button" onclick="analisis()">salarios general</button>
         <button type="button" onclick="analisisTop()">salarios top</button>
-    </section>
-    
+    </section> -->
+
     </main>
 
 
 
-   <script src="./geometry.js"></script>
-   <script src="./discounts.js"></script>
-   <script src="./statistics.js"></script>
-   <script src="./salarios.js"></script>
-   <script src="./analisis.js"></script>
+    <script src="./geometry.js"></script>
+    <script src="./discounts.js"></script>
+    <script src="./statistics.js"></script>
+    <script src="./salarios.js"></script>
+    <script src="./analisis.js"></script>
 </body>
+
 </html>
