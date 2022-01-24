@@ -1,5 +1,7 @@
-# curso-practico-javascript
-- Math Bot that can help you with your homework!
+# MATH BOT 
+
+## what is this? 
+- A Math Bot that can help you with your homework!
 
 ## live page
 - You can watch the project at [https://davidballezaa.github.io/math-bot/]
